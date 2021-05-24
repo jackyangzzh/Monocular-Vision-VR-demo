@@ -81,7 +81,8 @@ public class CubeMovement : MonoBehaviour
         #region Manage Input
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GetComponent<Renderer>().material.color = Random.ColorHSV();
+            leftCube.transform.position = initialPosition;
+            rightCube.transform.position = initialPosition;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -129,7 +130,7 @@ public class CubeMovement : MonoBehaviour
         #endregion
 
         #region Manage Display
-        currentMoving.text = moveLeft ? "Currently Moving: Left" : "Currently Moving: Right";
+        currentMoving.text = "Currently Selected: " + (moveLeft ? "Left" : "Right");
         leftAxisText.text = "Left: " + leftAxis;
         rightAxisText.text = "Right: " + rightAxis;
         #endregion

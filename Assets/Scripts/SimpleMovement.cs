@@ -11,3 +11,5 @@ public class SimpleMovement : MonoBehaviour
         transform.position = new Vector3(Mathf.Sin(Time.time), 0, 0);
     }
 }
+
+
